@@ -6,14 +6,15 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       home: Scaffold(
-        body: SafeArea(
-          bottom: false,
-          child: WebView(
-            initialUrl: "https://jangwoojun.github.io/",
-            javascriptMode: JavascriptMode.unrestricted,
-          ),
+        appBar: AppBar(
+          title: Text("장우준 블로그"),
+          backgroundColor: Colors.black,
+        ),
+        body: WebView(
+          initialUrl: "https://jangwoojun.github.io/",
+          javascriptMode: JavascriptMode.unrestricted,
         ),
       ),
     );
